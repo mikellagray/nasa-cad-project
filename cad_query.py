@@ -12,7 +12,7 @@ MIN_DATE = datetime(2028, 1, 1)
 MIN_DIAMETER = 40  # meters
 MAX_DIAMETER = 120  # meters
 
-def fetch_close_approach_data(date_min=None, date_max=None):
+def fetch_close_approach_data(date_min=2026-01-01, date_max=2040-01-01):
     """
     Fetch Close Approach Data from NASA SSD API
     
