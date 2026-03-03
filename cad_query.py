@@ -25,8 +25,10 @@ def fetch_close_approach_data(date_min=2026-01-01, date_max=2040-01-01):
     """
     try:
         params = {
-            'kind': 'nea',  # Near-Earth asteroids
-            'fulldata': 'true'
+            'kind': 'au',          # Corrects 'nea' to 'au' (asteroids)
+            'dist-max': '0.05',    # Example: filter for objects within 0.05 AU
+            'date-min': 'now'      # Filter for approaches happening from today forward
+} # Near-Earth asteroids
         }
         
         if date_min:
